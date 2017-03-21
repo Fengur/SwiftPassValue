@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12106.1" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="umI-MS-UMA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12074.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="xIR-f5-LgV">
+            <objects>
+                <navigationController id="umI-MS-UMA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rNV-Od-wkk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.39338239330000002" blue="0.51682817199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7Xo-PK-q78" kind="relationship" relationship="rootViewController" id="dQj-7I-sDs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CX4-z4-Fq9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6593" y="-373"/>
+        </scene>
+        <!--Pass Value-->
+        <scene sceneID="D24-eB-qzv">
+            <objects>
+                <viewController id="7Xo-PK-q78" customClass="ViewController" customModule="FGSwiftPassValue" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oKP-iK-od4"/>
+                        <viewControllerLayoutGuide type="bottom" id="LnY-zK-4fl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HeA-5q-vPO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p64-kd-QQG">
+                                <rect key="frame" x="87" y="311" width="200" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.39338239330000002" blue="0.51682817199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="XO8-p2-iTq"/>
+                                    <constraint firstAttribute="width" constant="200" id="wgH-Zx-lpa"/>
+                                </constraints>
+                                <state key="normal" title="Begin">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2rI-Vh-jUh" kind="push" id="nTH-mU-EdF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ShowValue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zc3-3D-ps1">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.39338239330000002" blue="0.51682817199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OQB-Bj-n7p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LnY-zK-4fl" firstAttribute="top" secondItem="Zc3-3D-ps1" secondAttribute="bottom" id="G3L-wZ-IcY"/>
+                            <constraint firstItem="p64-kd-QQG" firstAttribute="centerY" secondItem="HeA-5q-vPO" secondAttribute="centerY" id="HHz-Ak-zrh"/>
+                            <constraint firstAttribute="trailing" secondItem="Zc3-3D-ps1" secondAttribute="trailing" id="XcR-1X-wfj"/>
+                            <constraint firstItem="p64-kd-QQG" firstAttribute="centerX" secondItem="HeA-5q-vPO" secondAttribute="centerX" id="pSp-mB-ZJU"/>
+                            <constraint firstItem="Zc3-3D-ps1" firstAttribute="leading" secondItem="HeA-5q-vPO" secondAttribute="leading" id="wjj-ZZ-Ixi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pass Value" id="Xrr-h5-ldu"/>
+                    <connections>
+                        <outlet property="showMsgLabel" destination="Zc3-3D-ps1" id="wrf-cH-q5B"/>
+                        <outlet property="startBtn" destination="p64-kd-QQG" id="ku1-dB-0h0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hg0-n1-1pS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5729" y="-373"/>
+        </scene>
+        <!--SendValue-->
+        <scene sceneID="hco-kg-j7M">
+            <objects>
+                <viewController id="2rI-Vh-jUh" customClass="ValueController" customModule="FGSwiftPassValue" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ith-gg-JzM"/>
+                        <viewControllerLayoutGuide type="bottom" id="dLs-k9-1tW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eJd-0f-vOx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSA-TT-eqg">
+                                <rect key="frame" x="137.5" y="208" width="100" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.39338239330000002" blue="0.51682817199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bnO-Ql-ZAK"/>
+                                    <constraint firstAttribute="width" constant="100" id="vF1-Tu-foy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="Delegate">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="delegateBtnClicked:" destination="2rI-Vh-jUh" eventType="touchUpInside" id="1MX-Sp-g5Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cQ-4H-kwT">
+                                <rect key="frame" x="137.5" y="428" width="100" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.39338239330000002" blue="0.51682817199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CZk-Kp-Gw6"/>
+                                    <constraint firstAttribute="width" constant="100" id="H5l-kE-MJ9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="Notification">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="notifyBtnClicked:" destination="2rI-Vh-jUh" eventType="touchUpInside" id="Wxh-p7-wgK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdO-QJ-7uR">
+                                <rect key="frame" x="137.5" y="318" width="100" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.39338239330000002" blue="0.51682817199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="FB8-Pv-Olo"/>
+                                    <constraint firstAttribute="height" constant="30" id="tTk-8X-2mv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="Closure">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clousureBtnClicked:" destination="2rI-Vh-jUh" eventType="touchUpInside" id="pXm-rZ-4gC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2cQ-4H-kwT" firstAttribute="centerX" secondItem="eJd-0f-vOx" secondAttribute="centerX" id="0Bg-nv-TRR"/>
+                            <constraint firstItem="JSA-TT-eqg" firstAttribute="centerX" secondItem="eJd-0f-vOx" secondAttribute="centerX" id="0WC-Wj-90e"/>
+                            <constraint firstItem="2cQ-4H-kwT" firstAttribute="top" secondItem="rdO-QJ-7uR" secondAttribute="bottom" constant="80" id="ATd-LR-a2P"/>
+                            <constraint firstItem="rdO-QJ-7uR" firstAttribute="top" secondItem="JSA-TT-eqg" secondAttribute="bottom" constant="80" id="RZY-Rh-HZT"/>
+                            <constraint firstItem="rdO-QJ-7uR" firstAttribute="centerY" secondItem="eJd-0f-vOx" secondAttribute="centerY" id="Y93-39-uSQ"/>
+                            <constraint firstItem="rdO-QJ-7uR" firstAttribute="centerX" secondItem="eJd-0f-vOx" secondAttribute="centerX" id="bJK-H9-v0W"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="SendValue" id="fSq-2h-Yjj"/>
+                    <connections>
+                        <outlet property="closureBtn" destination="rdO-QJ-7uR" id="czC-eN-g0A"/>
+                        <outlet property="delegateBtn" destination="JSA-TT-eqg" id="4vR-sz-RGR"/>
+                        <outlet property="notifyBtn" destination="2cQ-4H-kwT" id="pEN-LA-ta6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iJy-fl-N48" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4818" y="-374"/>
+        </scene>
+    </scenes>
+</document>
